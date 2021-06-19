@@ -1,22 +1,22 @@
-create table publisher (
-	id integer primary key autoincrement,
-	name text,
-	country text
+CREATE TABLE publisher (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TEXT,
+	country TEXT
 );
 
-create table books(
-	id integer primary key autoincrement,
-	title text,
-	publisher integer,
-	foreign key(publisher) references publisher(id)
+CREATE TABLE books(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	title TEXT,
+	publisher INTEGER,
+	FOREIGN KEY(publisher) REFERENCES publisher(id)
 );
 
-create table subjects(
-	id integer primary key autoincrement,
-	name text
+CREATE TABLE subjects(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TEXT
 );
 
-create table books_subjects (
-	foreign key(books) references books(id),
-	foreign key(subjects) references subjects(id)
+CREATE TABLE books_subjects (
+	FOREIGN KEY(books) REFERENCES books(id),
+	FOREIGN KEY(subjects) REFERENCES subjects(id)
 );

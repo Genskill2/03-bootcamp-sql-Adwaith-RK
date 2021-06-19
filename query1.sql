@@ -1,1 +1,1 @@
-select title from books where publisher=1;
+SELECT title FROM books WHERE publisher=1;

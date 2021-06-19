@@ -1,1 +1,1 @@
-select S.name from subjects S, books_subjects BS where S.id=BS.subject and BS.book=6;
+SELECT S.name FROM subjects S, books_subjects BS WHERE S.id=BS.subject AND BS.book=6;
